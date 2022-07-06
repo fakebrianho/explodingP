@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0
+		}
+
+		canvas {
+			display: block
+		}
+
+		#container {
+			width: 100vw;
+			height: 100vh
+		}
+
+		.video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			opacity: 0.0;
+			/* border: 5px solid #f00; */
+			pointer-events: none;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 40vh;
+			height: 68vh;
+		}
+
+		.video video {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="video">
+		<video src="1.mp4" id='video1' autoplay muted></video>
+		<video src="2.mp4" id='video2' autoplay muted></video>
+	</div>
+	<div id="container"></div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
